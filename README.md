@@ -3,56 +3,57 @@
 
 ## Informações importantes
 
-  - [Clique
+-   [Clique
     aqui](https://github.com/curso-r/main-visualizacao/raw/master/material_do_curso.zip)
     para baixar o material do curso.
 
-  - Nosso blog: <https://curso-r.com/blog/>
+-   Nosso blog: <https://curso-r.com/blog/>
 
-  - Nossos livros: [Ciência de Dados em R](https://livro.curso-r.com/) e
+-   Nossos livros: [Ciência de Dados em R](https://livro.curso-r.com/) e
     [Zen do R](https://curso-r.github.io/zen-do-r/)
 
 ## Dúvidas
 
 Fora do horário de aula ou monitoria:
 
-  - perguntas gerais sobre o curso deverão ser feitas no Classroom.
+-   perguntas gerais sobre o curso deverão ser feitas no Classroom.
 
-  - perguntas sobre R, principalmente as que envolverem código, deverão
+-   perguntas sobre R, principalmente as que envolverem código, deverão
     ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
 
 ## Slides
 
-| slides                                                                                                                      | pdf                                                                                                                       |
-| :-------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
-| [01-introducao-ao-curso.html](https://curso-r.github.io/main-visualizacao/slides/01-introducao-ao-curso.html)               | [01-introducao-ao-curso.pdf](https://curso-r.github.io/main-visualizacao/slides/01-introducao-ao-curso.pdf)               |
-| [02-introducao-rmd.html](https://curso-r.github.io/main-visualizacao/slides/02-introducao-rmd.html)                         | [02-introducao-rmd.pdf](https://curso-r.github.io/main-visualizacao/slides/02-introducao-rmd.pdf)                         |
-| [03-ggplot2-alt.html](https://curso-r.github.io/main-visualizacao/slides/03-ggplot2-alt.html)                               | [03-ggplot2-alt.pdf](https://curso-r.github.io/main-visualizacao/slides/03-ggplot2-alt.pdf)                               |
-| [03-ggplot2.html](https://curso-r.github.io/main-visualizacao/slides/03-ggplot2.html)                                       | [03-ggplot2.pdf](https://curso-r.github.io/main-visualizacao/slides/03-ggplot2.pdf)                                       |
-| [04-html-css.html](https://curso-r.github.io/main-visualizacao/slides/04-html-css.html)                                     | [04-html-css.pdf](https://curso-r.github.io/main-visualizacao/slides/04-html-css.pdf)                                     |
-| [05-apresentacoes-com-xaringan.html](https://curso-r.github.io/main-visualizacao/slides/05-apresentacoes-com-xaringan.html) | [05-apresentacoes-com-xaringan.pdf](https://curso-r.github.io/main-visualizacao/slides/05-apresentacoes-com-xaringan.pdf) |
-| [06-miscelanea.html](https://curso-r.github.io/main-visualizacao/slides/06-miscelanea.html)                                 | [06-miscelanea.pdf](https://curso-r.github.io/main-visualizacao/slides/06-miscelanea.pdf)                                 |
+| slides                                                                                      | pdf                                                                                       |
+|:--------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|
+| [extra-ggplot2.html](https://curso-r.github.io/main-visualizacao/slides/extra-ggplot2.html) | [extra-ggplot2.pdf](https://curso-r.github.io/main-visualizacao/slides/extra-ggplot2.pdf) |
+| [slides.html](https://curso-r.github.io/main-visualizacao/slides/slides.html)               | [slides.pdf](https://curso-r.github.io/main-visualizacao/slides/slides.pdf)               |
 
-## Scripts utilizados em aula
+## Scripts por trás dos slides
 
-| script |
-| :----- |
+| script                                                                                                                                  |
+|:----------------------------------------------------------------------------------------------------------------------------------------|
+| [exemplos_de_aula/01-introducao.R](https://github.com/curso-r/202204-visualizacao/blob/master/exemplos_de_aula/01-introducao.R)         |
+| [exemplos_de_aula/02-otimizacao.R](https://github.com/curso-r/202204-visualizacao/blob/master/exemplos_de_aula/02-otimizacao.R)         |
+| [exemplos_de_aula/03-extensoes.R](https://github.com/curso-r/202204-visualizacao/blob/master/exemplos_de_aula/03-extensoes.R)           |
+| [exemplos_de_aula/04-interatividade.R](https://github.com/curso-r/202204-visualizacao/blob/master/exemplos_de_aula/04-interatividade.R) |
+
+## Parte prática das aulas
+
+    #> [1] "Os arquivos serão disponibilizados após a primeira aula"
 
 ## Lição de casa
 
 | exercicio                                                                                                          |
-| :----------------------------------------------------------------------------------------------------------------- |
-| [exercicios/01-rmarkdown.R](https://curso-r.github.io/main-visualizacao/exercicios/01-rmarkdown.R)                 |
-| [exercicios/02-pagedown.R](https://curso-r.github.io/main-visualizacao/exercicios/02-pagedown.R)                   |
-| [exercicios/02-xaringan-opcional.R](https://curso-r.github.io/main-visualizacao/exercicios/02-xaringan-opcional.R) |
-| [exercicios/03-ggplot2.R](https://curso-r.github.io/main-visualizacao/exercicios/03-ggplot2.R)                     |
-| [exercicios/04-mapas-com-ggplot2.R](https://curso-r.github.io/main-visualizacao/exercicios/04-mapas-com-ggplot2.R) |
-| [exercicios/05-miscelanea.R](https://curso-r.github.io/main-visualizacao/exercicios/05-miscelanea.R)               |
+|:-------------------------------------------------------------------------------------------------------------------|
+| [exercicios/01-introducao.R](https://curso-r.github.io/main-visualizacao/exercicios/01-introducao.R)               |
+| [exercicios/02-otimizacao.R](https://curso-r.github.io/main-visualizacao/exercicios/02-otimizacao.R)               |
+| [exercicios/03-extensoes.R](https://curso-r.github.io/main-visualizacao/exercicios/03-extensoes.R)                 |
+| [exercicios/04-interatividade-sf.R](https://curso-r.github.io/main-visualizacao/exercicios/04-interatividade-sf.R) |
 
 ## Trabalhos finais premiados
 
-| pasta\_compactada |
-| :---------------- |
+| pasta_compactada |
+|:-----------------|
 
 ## Material extra
 
@@ -60,8 +61,45 @@ Referências extras relacionadas com o conteúdos das aulas, ou materiais
 que comentamos quando tiramos dúvidas (não necessariamente são
 relacionadas com o conteúdo da aula).
 
-| Aula | Tema | Descrição |
-| :--- | :--- | :-------- |
+| Tema           | Descrição                                                                                                                                                  |
+|:---------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1\. Básico     | [Cores no R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)                                                                                        |
+| 1\. Básico     | [Documentação do ggplot2](https://ggplot2.tidyverse.org/reference/index.html)                                                                              |
+| 1\. Básico     | [Especificações aestéticas do ggplot2](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html)                                                          |
+| 1\. Básico     | [Vignette do ggplot - Especificações do aes()](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html)                                                  |
+| 1\. Básico     | [Formatação de datas - documentação da função strptime](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/strptime)                       |
+| 1\. Básico     | [Livro da Curso-R - Capítulo sobre Fatores](https://livro.curso-r.com/7-6-forcats.html)                                                                    |
+| 2\. Otimização | [Paletas de cores hexadecimais](https://coolors.co/generate)                                                                                               |
+| 2\. Otimização | [Pacote prismatic::color(colors())](https://emilhvitfeldt.github.io/prismatic/)                                                                            |
+| 2\. Otimização | [Color brewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)                                                                                  |
+| 2\. Otimização | [Tinter, voce da uma cor e ele gera uma paleta!](https://github.com/sebdalgarno/tinter)                                                                    |
+| 2\. Otimização | [Pacote para visualização de paletas de cores](https://github.com/EmilHvitfeldt/paletteer)                                                                 |
+| 2\. Otimização | [Visualização de paletas para daltonicos](https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40)                                  |
+| 2\. Otimização | [Pacote extrafont - importar fontes no windows](https://github.com/wch/extrafont)                                                                          |
+| 2\. Otimização | [Exemplos de ggthemes](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/)                                                             |
+| 2\. Otimização | [Documentação Color Brewer ggplot2](https://ggplot2.tidyverse.org/reference/scale_brewer.html)                                                             |
+| 2\. Otimização | [Pacote Thematic](https://rstudio.github.io/thematic/index.html)                                                                                           |
+| 3\. Extensões  | [Pacote ggrepel - afastar as anotações (labels)](https://ggrepel.slowkow.com/)                                                                             |
+| 3\. Extensões  | [Pacote gghighlight - realçando pontos](https://blog.curso-r.com/posts/2020-02-20-gghighlight/)                                                            |
+| 3\. Extensões  | [Galeria de extensões para o ggplot2](https://exts.ggplot2.tidyverse.org/gallery/)                                                                         |
+| 3\. Extensões  | [Pacote ggrepel - afastar as anotações (labels)](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html)                                   |
+| 3\. Extensões  | [Hrbrthemes](https://github.com/hrbrmstr/hrbrthemes)                                                                                                       |
+| 3\. Extensões  | [Pacote ggridges](https://wilkelab.org/ggridges/)                                                                                                          |
+| 4\. Dinâmico   | [Pacote plotly](https://plotly.com/ggplot2/)                                                                                                               |
+| 4\. Dinâmico   | [Geocoding de endereços](https://github.com/dkahle/ggmap)                                                                                                  |
+| 4\. Dinâmico   | [Unindo mapas the tidy way](https://blog.curso-r.com/posts/2017-11-23-union-sf/)                                                                           |
+| 4\. Dinâmico   | [Pacote rayshader - mapas em 3d](https://www.rayshader.com)                                                                                                |
+| 4\. Dinâmico   | [Documentação do pacote geobr](https://ipeagit.github.io/geobr/)                                                                                           |
+| 4\. Dinâmico   | [documentação do pacote geobr](https://ipeagit.github.io/geobr/)                                                                                           |
+| 4\. Dinâmico   | [Organização no GitHub r-spatial](http://github.com/r-spatial/)                                                                                            |
+| 4\. Dinâmico   | [Conteúdo sobre mapas em português](https://jonnyphillips.github.io/Ciencia_de_Dados/Mapas.html)                                                           |
+| x\. Miscelânea | [Ferramenta para buscar as cores em hex](https://htmlcolorcodes.com/)                                                                                      |
+| x\. Miscelânea | [Exemplos maravilhosos de tidytuesday](https://github.com/z3tt/TidyTuesday)                                                                                |
+| x\. Miscelânea | [Curiosidade sobre o ggplot2 e Hadley Wickham](https://www.reddit.com/r/dataisbeautiful/comments/3mp9r7/im_hadley_wickham_chief_scientist_at_rstudio_and/) |
+| x\. Miscelânea | [Alberto Cairo - Referência sobre visualização de dados](https://twitter.com/AlbertoCairo)                                                                 |
+| x\. Miscelânea | [Curiosidade: Pacote de fonte xkcd](https://xkcd.r-forge.r-project.org)                                                                                    |
+| x\. Miscelânea | [Curiosidade: arte com ggplot2](https://www.data-imaginist.com/art)                                                                                        |
+| x\. Miscelânea | [Apresentação ggplot wizardry](https://twitter.com/CedScherer/status/1374330476412993541?s=20)                                                             |
 
 ## Redes sociais da Curso-R
 
