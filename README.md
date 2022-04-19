@@ -39,7 +39,9 @@ Fora do horário de aula ou monitoria:
 
 ## Parte prática das aulas
 
-    #> [1] "Os arquivos serão disponibilizados após a primeira aula"
+| script                                                                                                  |
+|:--------------------------------------------------------------------------------------------------------|
+| [praticas/01-ggplot2.R](https://github.com/curso-r/202204-visualizacao/blob/main/praticas/01-ggplot2.R) |
 
 ## Lição de casa
 

@@ -95,14 +95,26 @@ knitr::kable(
 ## Parte prática das aulas
 
 ```{r}
-pasta <- "praticas/"
+pasta <- "/praticas"
+
+hh <- httr::add_headers()
+req <- httr::GET(paste0(
+  "https://api.github.com/repos/", 
+  "curso-r", "/", "202204-visualizacao", "/git/trees/main?recursive=1"
+), hh)
+arquivos <- unlist(
+  lapply(httr::content(req)$tree, "[", "path"), 
+  use.names = FALSE
+)
+arquivos <- grep("praticas", arquivos, value = TRUE, fixed = TRUE)
+arquivos <- grep("R$", arquivos, value = TRUE)
 
 tab <- tibble::tibble(
-    script = CursoRopen:::list_github_files(params$turma, pasta, ".R$"),
+    script = arquivos,
     link = paste0(
       "https://github.com/curso-r/",
       params$turma,
-      "/blob/master/",
+      "/blob/main/",
       script
     )
   ) %>%
@@ -114,8 +126,6 @@ if (nrow(tab) > 0) {
 } else {
   "Os arquivos serão disponibilizados após a primeira aula"
 }
-
-
 ```
 
 
@@ -127,7 +137,10 @@ tibble::tibble(
   link = paste0("https://curso-r.github.io/", params$main_repo, "/", nome),
   exercicio = glue::glue("[{nome}]({link})")
 ) %>%
-  dplyr::filter(!stringr::str_detect(nome, "resolucao_")) %>% 
+  dplyr::filter(
+    !stringr::str_detect(nome, "resolucao_"),
+    stringr::str_detect(nome, "R$")
+  ) %>% 
   dplyr::select(exercicio) %>% 
   knitr::kable()
 ```
