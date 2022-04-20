@@ -46,7 +46,46 @@ dados_starwars |>
 dados_starwars |>
   ggplot() +
   aes(x = massa, y = altura) +
-  geom_point()
+  geom_point() +
+  geom_text(aes(label = nome))
+
+dados_starwars |>
+  ggplot() +
+  geom_histogram(aes(x = altura, y = ..density..), fill = "darkblue") +
+  geom_density(aes(x = altura), color = "white")
+
+dados_starwars |>
+  ggplot(aes(x = altura, y = ..density..)) +
+  geom_histogram(fill = "darkblue") +
+  geom_density(color = "white")
+
+
+dados_starwars2 <- dados_starwars |>
+  dplyr::rename(massa2 = massa)
+
+ggplot() +
+  geom_point(
+    aes(x = massa, y = altura, colour = genero),
+    size = 5,
+    data = dados_starwars
+  ) +
+  geom_point(
+    aes(x = massa2, y = altura),
+    data = dados_starwars2 |> dplyr::filter(massa2 < 1000)
+  )
+
+ggplot() +
+  aes(x = massa, y = altura) +
+  geom_point(
+    aes(colour = genero),
+    size = 5,
+    data = dados_starwars
+  ) +
+  geom_point(
+    aes(x = massa2),
+    data = dados_starwars2 |> dplyr::filter(massa2 < 1000)
+  )
+
 
 dados_starwars |>
   ggplot() +
