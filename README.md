@@ -65,45 +65,46 @@ Referências extras relacionadas com o conteúdos das aulas, ou materiais
 que comentamos quando tiramos dúvidas (não necessariamente são
 relacionadas com o conteúdo da aula).
 
-| Tema           | Descrição                                                                                                                                                  |
-|:---------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1\. Básico     | [Cores no R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)                                                                                        |
-| 1\. Básico     | [Documentação do ggplot2](https://ggplot2.tidyverse.org/reference/index.html)                                                                              |
-| 1\. Básico     | [Especificações aestéticas do ggplot2](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html)                                                          |
-| 1\. Básico     | [Vignette do ggplot - Especificações do aes()](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html)                                                  |
-| 1\. Básico     | [Formatação de datas - documentação da função strptime](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/strptime)                       |
-| 1\. Básico     | [Livro da Curso-R - Capítulo sobre Fatores](https://livro.curso-r.com/7-6-forcats.html)                                                                    |
-| 2\. Otimização | [Paletas de cores hexadecimais](https://coolors.co/generate)                                                                                               |
-| 2\. Otimização | [Pacote prismatic::color(colors())](https://emilhvitfeldt.github.io/prismatic/)                                                                            |
-| 2\. Otimização | [Color brewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)                                                                                  |
-| 2\. Otimização | [Tinter, voce da uma cor e ele gera uma paleta!](https://github.com/sebdalgarno/tinter)                                                                    |
-| 2\. Otimização | [Pacote para visualização de paletas de cores](https://github.com/EmilHvitfeldt/paletteer)                                                                 |
-| 2\. Otimização | [Visualização de paletas para daltonicos](https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40)                                  |
-| 2\. Otimização | [Pacote extrafont - importar fontes no windows](https://github.com/wch/extrafont)                                                                          |
-| 2\. Otimização | [Exemplos de ggthemes](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/)                                                             |
-| 2\. Otimização | [Documentação Color Brewer ggplot2](https://ggplot2.tidyverse.org/reference/scale_brewer.html)                                                             |
-| 2\. Otimização | [Pacote Thematic](https://rstudio.github.io/thematic/index.html)                                                                                           |
-| 3\. Extensões  | [Pacote ggrepel - afastar as anotações (labels)](https://ggrepel.slowkow.com/)                                                                             |
-| 3\. Extensões  | [Pacote gghighlight - realçando pontos](https://blog.curso-r.com/posts/2020-02-20-gghighlight/)                                                            |
-| 3\. Extensões  | [Galeria de extensões para o ggplot2](https://exts.ggplot2.tidyverse.org/gallery/)                                                                         |
-| 3\. Extensões  | [Pacote ggrepel - afastar as anotações (labels)](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html)                                   |
-| 3\. Extensões  | [Hrbrthemes](https://github.com/hrbrmstr/hrbrthemes)                                                                                                       |
-| 3\. Extensões  | [Pacote ggridges](https://wilkelab.org/ggridges/)                                                                                                          |
-| 4\. Dinâmico   | [Pacote plotly](https://plotly.com/ggplot2/)                                                                                                               |
-| 4\. Dinâmico   | [Geocoding de endereços](https://github.com/dkahle/ggmap)                                                                                                  |
-| 4\. Dinâmico   | [Unindo mapas the tidy way](https://blog.curso-r.com/posts/2017-11-23-union-sf/)                                                                           |
-| 4\. Dinâmico   | [Pacote rayshader - mapas em 3d](https://www.rayshader.com)                                                                                                |
-| 4\. Dinâmico   | [Documentação do pacote geobr](https://ipeagit.github.io/geobr/)                                                                                           |
-| 4\. Dinâmico   | [documentação do pacote geobr](https://ipeagit.github.io/geobr/)                                                                                           |
-| 4\. Dinâmico   | [Organização no GitHub r-spatial](http://github.com/r-spatial/)                                                                                            |
-| 4\. Dinâmico   | [Conteúdo sobre mapas em português](https://jonnyphillips.github.io/Ciencia_de_Dados/Mapas.html)                                                           |
-| x\. Miscelânea | [Ferramenta para buscar as cores em hex](https://htmlcolorcodes.com/)                                                                                      |
-| x\. Miscelânea | [Exemplos maravilhosos de tidytuesday](https://github.com/z3tt/TidyTuesday)                                                                                |
-| x\. Miscelânea | [Curiosidade sobre o ggplot2 e Hadley Wickham](https://www.reddit.com/r/dataisbeautiful/comments/3mp9r7/im_hadley_wickham_chief_scientist_at_rstudio_and/) |
-| x\. Miscelânea | [Alberto Cairo - Referência sobre visualização de dados](https://twitter.com/AlbertoCairo)                                                                 |
-| x\. Miscelânea | [Curiosidade: Pacote de fonte xkcd](https://xkcd.r-forge.r-project.org)                                                                                    |
-| x\. Miscelânea | [Curiosidade: arte com ggplot2](https://www.data-imaginist.com/art)                                                                                        |
-| x\. Miscelânea | [Apresentação ggplot wizardry](https://twitter.com/CedScherer/status/1374330476412993541?s=20)                                                             |
+| Tema           | Descrição                                                                                                                                                                                              |
+|:---------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1\. Básico     | [Cores no R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)                                                                                                                                    |
+| 1\. Básico     | [Documentação do ggplot2](https://ggplot2.tidyverse.org/reference/index.html)                                                                                                                          |
+| 1\. Básico     | [Especificações aestéticas do ggplot2](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html)                                                                                                      |
+| 1\. Básico     | [Vignette do ggplot - Especificações do aes()](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html)                                                                                              |
+| 1\. Básico     | [Formatação de datas - documentação da função strptime](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/strptime)                                                                   |
+| 1\. Básico     | [Livro da Curso-R - Capítulo sobre Fatores](https://livro.curso-r.com/7-6-forcats.html)                                                                                                                |
+| 2\. Otimização | [Paletas de cores hexadecimais](https://coolors.co/generate)                                                                                                                                           |
+| 2\. Otimização | [Pacote prismatic::color(colors())](https://emilhvitfeldt.github.io/prismatic/)                                                                                                                        |
+| 2\. Otimização | [Color brewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)                                                                                                                              |
+| 2\. Otimização | [Tinter, voce da uma cor e ele gera uma paleta!](https://github.com/sebdalgarno/tinter)                                                                                                                |
+| 2\. Otimização | [Pacote para visualização de paletas de cores](https://github.com/EmilHvitfeldt/paletteer)                                                                                                             |
+| 2\. Otimização | [Visualização de paletas para daltonicos](https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40)                                                                              |
+| 2\. Otimização | [Pacote extrafont - importar fontes no windows](https://github.com/wch/extrafont)                                                                                                                      |
+| 2\. Otimização | [Exemplos de ggthemes](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/)                                                                                                         |
+| 2\. Otimização | [Documentação Color Brewer ggplot2](https://ggplot2.tidyverse.org/reference/scale_brewer.html)                                                                                                         |
+| 2\. Otimização | [Pacote Thematic](https://rstudio.github.io/thematic/index.html)                                                                                                                                       |
+| 3\. Extensões  | [Pacote ggrepel - afastar as anotações (labels)](https://ggrepel.slowkow.com/)                                                                                                                         |
+| 3\. Extensões  | [Pacote gghighlight - realçando pontos](https://blog.curso-r.com/posts/2020-02-20-gghighlight/)                                                                                                        |
+| 3\. Extensões  | [Galeria de extensões para o ggplot2](https://exts.ggplot2.tidyverse.org/gallery/)                                                                                                                     |
+| 3\. Extensões  | [Pacote ggrepel - afastar as anotações (labels)](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html)                                                                               |
+| 3\. Extensões  | [Hrbrthemes](https://github.com/hrbrmstr/hrbrthemes)                                                                                                                                                   |
+| 3\. Extensões  | [Pacote ggridges](https://wilkelab.org/ggridges/)                                                                                                                                                      |
+| 4\. Dinâmico   | [Pacote plotly](https://plotly.com/ggplot2/)                                                                                                                                                           |
+| 4\. Dinâmico   | [Geocoding de endereços](https://github.com/dkahle/ggmap)                                                                                                                                              |
+| 4\. Dinâmico   | [Unindo mapas the tidy way](https://blog.curso-r.com/posts/2017-11-23-union-sf/)                                                                                                                       |
+| 4\. Dinâmico   | [Pacote rayshader - mapas em 3d](https://www.rayshader.com)                                                                                                                                            |
+| 4\. Dinâmico   | [Documentação do pacote geobr](https://ipeagit.github.io/geobr/)                                                                                                                                       |
+| 4\. Dinâmico   | [documentação do pacote geobr](https://ipeagit.github.io/geobr/)                                                                                                                                       |
+| 4\. Dinâmico   | [Organização no GitHub r-spatial](http://github.com/r-spatial/)                                                                                                                                        |
+| 4\. Dinâmico   | [Conteúdo sobre mapas em português](https://jonnyphillips.github.io/Ciencia_de_Dados/Mapas.html)                                                                                                       |
+| x\. Miscelânea | [Ferramenta para buscar as cores em hex](https://htmlcolorcodes.com/)                                                                                                                                  |
+| x\. Miscelânea | [Exemplos maravilhosos de tidytuesday](https://github.com/z3tt/TidyTuesday)                                                                                                                            |
+| x\. Miscelânea | [Curiosidade sobre o ggplot2 e Hadley Wickham](https://www.reddit.com/r/dataisbeautiful/comments/3mp9r7/im_hadley_wickham_chief_scientist_at_rstudio_and/)                                             |
+| x\. Miscelânea | [Alberto Cairo - Referência sobre visualização de dados](https://twitter.com/AlbertoCairo)                                                                                                             |
+| x\. Miscelânea | [Curiosidade: Pacote de fonte xkcd](https://xkcd.r-forge.r-project.org)                                                                                                                                |
+| x\. Miscelânea | [Curiosidade: arte com ggplot2](https://www.data-imaginist.com/art)                                                                                                                                    |
+| x\. Miscelânea | [Apresentação ggplot wizardry](https://twitter.com/CedScherer/status/1374330476412993541?s=20)                                                                                                         |
+| x\. Miscelânea | [G. A. (1956). The magical number seven, plus or minus two: Some limits on our capacity for processing information. Psychological Review, 63(2), 81–97.](https://www.csc2.ncsu.edu/faculty/healey/PP/) |
 
 ## Redes sociais da Curso-R
 
