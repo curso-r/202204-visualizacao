@@ -44,6 +44,11 @@ Fora do horário de aula ou monitoria:
 | [praticas/01-ggplot2.R](https://github.com/curso-r/202204-visualizacao/blob/main/praticas/01-ggplot2.R)       |
 | [praticas/02-cores.R](https://github.com/curso-r/202204-visualizacao/blob/main/praticas/02-cores.R)           |
 | [praticas/03-otimizacao.R](https://github.com/curso-r/202204-visualizacao/blob/main/praticas/03-otimizacao.R) |
+| [praticas/04-anotacoes.R](https://github.com/curso-r/202204-visualizacao/blob/main/praticas/04-anotacoes.R)   |
+| [praticas/05-patchwork.R](https://github.com/curso-r/202204-visualizacao/blob/main/praticas/05-patchwork.R)   |
+| [praticas/06-ggridges.R](https://github.com/curso-r/202204-visualizacao/blob/main/praticas/06-ggridges.R)     |
+| [praticas/07-gganimate.R](https://github.com/curso-r/202204-visualizacao/blob/main/praticas/07-gganimate.R)   |
+| [praticas/08-ggtext.R](https://github.com/curso-r/202204-visualizacao/blob/main/praticas/08-ggtext.R)         |
 
 ## Lição de casa
 
