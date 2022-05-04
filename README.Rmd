@@ -41,7 +41,6 @@ Fora do horário de aula ou monitoria:
 
 - perguntas sobre R, principalmente as que envolverem código, deverão ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
 
-
 ## Slides
 
 ```{r}
@@ -82,7 +81,7 @@ knitr::kable(
     script = CursoRopen:::list_github_files(params$main_repo, pasta, ".R$"),
     link = paste0(
       "https://github.com/curso-r/",
-      params$turma,
+      params$main_repo,
       "/blob/master/",
       script
     )

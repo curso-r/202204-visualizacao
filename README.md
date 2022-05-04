@@ -30,12 +30,12 @@ Fora do horário de aula ou monitoria:
 
 ## Scripts por trás dos slides
 
-| script                                                                                                                                  |
-|:----------------------------------------------------------------------------------------------------------------------------------------|
-| [exemplos_de_aula/01-introducao.R](https://github.com/curso-r/202204-visualizacao/blob/master/exemplos_de_aula/01-introducao.R)         |
-| [exemplos_de_aula/02-otimizacao.R](https://github.com/curso-r/202204-visualizacao/blob/master/exemplos_de_aula/02-otimizacao.R)         |
-| [exemplos_de_aula/03-extensoes.R](https://github.com/curso-r/202204-visualizacao/blob/master/exemplos_de_aula/03-extensoes.R)           |
-| [exemplos_de_aula/04-interatividade.R](https://github.com/curso-r/202204-visualizacao/blob/master/exemplos_de_aula/04-interatividade.R) |
+| script                                                                                                                                |
+|:--------------------------------------------------------------------------------------------------------------------------------------|
+| [exemplos_de_aula/01-introducao.R](https://github.com/curso-r/main-visualizacao/blob/master/exemplos_de_aula/01-introducao.R)         |
+| [exemplos_de_aula/02-otimizacao.R](https://github.com/curso-r/main-visualizacao/blob/master/exemplos_de_aula/02-otimizacao.R)         |
+| [exemplos_de_aula/03-extensoes.R](https://github.com/curso-r/main-visualizacao/blob/master/exemplos_de_aula/03-extensoes.R)           |
+| [exemplos_de_aula/04-interatividade.R](https://github.com/curso-r/main-visualizacao/blob/master/exemplos_de_aula/04-interatividade.R) |
 
 ## Parte prática das aulas
 

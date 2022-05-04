@@ -39,6 +39,8 @@ gg_base <- da_pokemon |>
     title = "Temos que pegar **<span style='color:blue;'>Pokémon</span>**!"
   )
 
+# download.file(da_pokemon$img[1], destfile = "poke1.png")
+
 gg_base +
   scale_y_discrete(
     name = NULL,
