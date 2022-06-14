@@ -1,0 +1,287 @@
+---
+title: "Projeto visualização de dados"
+author: "Saulo Valentim"
+date: '2022-05-25'
+output: 
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: false
+    lightbox: true
+    gallery: false
+    highlight: tango
+---
+
+## Board Games
+
+O objetivo desse projeto é criar visualizações da base de dados "*Board Games"* do TidyTuesday.
+
+TidyTuesday é um evento onde toda semana uma nova base de dados é liberada, e as pessoas engajadas na comunidade montam suas visualizações para compartilhar nas redes sociais.
+
+Board Games trata-se de um conjunto de dados sobre jogos de tabuleiro, incluindo duas bases:
+
+-   i) detalhes sobre os jogos;
+
+-   ii) as notas de *reviews* de usuários.
+
+Para mais detalhes, acesse o link: <https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-01-25/readme.md>
+
+As principais ideias para construção das visualizações foram as seguintes:
+
+-   Quais jogos são para maiores de 18 anos;
+
+<!-- -->
+
+-   Tempo máximo de jogo por faixa de idade;
+
+<!-- -->
+
+-   Os 10 jogos mais jogados;
+
+-   Jogos que tiveram maior nota média de reviews nos últimos 5 anos;
+
+-   Os 10 jogos com maiores e menores ranks em 2022;
+
+-   Os 20 jogos mais adquiridos (owned);
+
+-   Relação entre quantidade de jogos adquiridos x idade.
+
+**Primeiro vamos carregar os pacotes necessários:**
+
+```{r carregar pacotes, warning=FALSE, message=F}
+# carregar pacotes --------------------------------------------------------
+library(tidyverse)
+library(highcharter)
+library(patchwork)
+library(ggthemes)
+library(highcharter)
+library(ggtext)
+library(plotly)
+```
+
+**Em seguida vamos importar a base de dados:**
+
+```{r importar os dados, message=F}
+# importar dados ----------------------------------------------------------
+ratings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-25/ratings.csv')
+details <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-25/details.csv')
+
+```
+
+# Agora vamos as visualizações !!!
+
+## Gráfico 1 - Quais jogos são para maiores de 18 anos
+
+```{r grafico_1, fig.width= 10, fig.height=6, fig.align='center'}
+# grafico_1 -------------------------------------------------
+idade_max <- filter(details, minage == 25)
+
+details %>%
+  filter(minage > 18) %>% 
+  mutate(primary = fct_reorder(primary, minage)) %>% 
+  ggplot() +
+  aes(x = primary, y= minage) +
+  geom_col() +
+  geom_col(
+    data = idade_max,
+    fill = "orange"
+    ) +
+  coord_flip() +
+  theme_base() +
+  labs(
+    title = "Jogos para maiores de idade",
+    subtitle = "Acima de 18 anos",
+    y = "Idade",
+    x = "Jogo",
+  )
+```
+
+## Gráfico 2 - Tempo máximo de jogo por faixa de idade
+
+```{r grafico_2, warning=FALSE}
+# grafico_2 -------------------------------------------------
+details %>%
+  mutate(minage = cut_width(minage, width=5, boundary=0)) %>% 
+  ggplot() +
+  aes(x= minage, y= log10(maxplaytime), fill = minage) +
+  geom_boxplot() +
+  labs(
+    title = "Tempo máximo de jogo por faixa de idade",
+    x = "Idade",
+    y = "Log10(tempo máximo)"
+  ) + 
+  theme_stata() +
+  theme(legend.position = "none")
+```
+
+## Gráfico 3 - Os 10 jogos mais jogados
+
+```{r grafico_3}
+# grafico_3 -------------------------------------------------
+details %>% 
+  arrange(desc(maxplaytime)) %>% 
+  slice(1:10) %>% 
+  hchart("bar", hcaes(
+    x = primary, y = maxplaytime
+  )) %>% 
+  hc_title(text = "Top10 - jogos que foram mais jogados") %>% 
+  hc_xAxis(title = list(text = "")) %>% 
+  hc_yAxis(title = list(text = "maxplaytime")) 
+```
+
+## Gráfico 4 - Jogos que tiveram maior nota média de reviews nos últimos 5 anos
+
+```{r grafico_4, fig.width= 11, fig.height=10, warning=F, message=F}
+# gráfico_4 ------------------------------------------------- 
+nomes <- data.frame(name = c("Malhya: Lands of Legends", "Erune", "Aeolis", 
+                             "Wings of the Motherland", "TerroriXico"))
+
+da_board <- ratings %>% 
+  filter(year != 0, year %in% c(2018:2022)) %>% 
+  group_by(year) %>% 
+  summarise(maior_media = max(average)) %>% 
+  arrange(desc(year)) %>% 
+  bind_cols(nomes) %>% 
+  left_join(ratings, by = "name") %>% 
+  rename(year=year.x) %>% 
+  select(name, year, maior_media, thumbnail) %>% 
+  mutate(name = fct_reorder(name, year))
+
+gg_board <- da_board %>% 
+  ggplot() +
+  geom_segment(
+    aes(x = 0, xend = maior_media, y = name, yend = name)
+    ) +
+  geom_point(
+    aes(x = maior_media, y = name, colour = name),
+    size = 2.5
+    ) +
+  annotate(
+    "label",
+    x = da_board$maior_media,
+    y = da_board$name,
+    label = paste(da_board$maior_media,"\nano:",da_board$year),
+    size = 4,
+    fill = c("orange", "light blue", "royal blue", "red", "Brown")
+    ) +
+  scale_colour_manual(
+    name = "",
+    values = c("orange", "light blue", "royal blue", "red", "Brown"),
+    labels = c("Malhya: Lands of Legends", "Erune", 
+               "Aeolis", "Wings of the Motherland", "TerroriXico")
+    ) +
+  labs(
+    x = "nota media reviews",
+    y = "",
+    title = "Jogo com maior nota media de reviews",
+    subtitle = "Período: 2018 a 2022"
+   ) +
+  theme_minimal()
+
+# library(remotes)
+# extrafont::font_import("exemplos_de_aula/fontes", prompt = FALSE)
+extrafont::loadfonts("win")
+
+gg_board +
+  scale_y_discrete(
+    name = NULL,
+    labels = glue::glue("<img src='{da_board$thumbnail[5:1]}' width='60'>")
+    ) +
+  theme(
+    plot.title = element_markdown(family = "101! CheckBoard", size = 28),
+    axis.text.y = element_markdown()
+    )
+```
+
+## Gráfico 5 - Os 10 jogos com maiores e menores ranks em 2022
+
+```{r grafico_5, fig.width= 10, fig.height=8, fig.align='center'}
+# gráfico_5 -------------------------------------------------
+p1 <- ratings %>% 
+  filter(year == 2022) %>% 
+  arrange(desc(rank)) %>% 
+  head(10) %>% 
+  mutate(name = fct_reorder(name, rank)) %>%
+  ggplot() +
+  aes(x = name, y = rank) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Top10 - Jogos com maior classificação em 2022",
+    x = "",
+    y = "Rank"
+  ) +
+  theme_solarized()
+
+p2 <- ratings %>% 
+  filter(year == 2022) %>% 
+  arrange(desc(rank)) %>% 
+  tail(10) %>%
+  mutate(name = fct_reorder(name, rank, .desc = T)) %>% 
+  ggplot() +
+  aes(x = name, y = rank) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Top10 - Jogos com menor classificação em 2022",
+    x = "",
+    y = "Rank"
+  ) +
+  theme_solarized()
+
+p1 / p2
+```
+
+## Gráfico 6 - Os 20 jogos mais adquiridos (owned)
+
+```{r grafico_6}
+# gráfico_6 -------------------------------------------------
+p3 <- details %>% 
+  arrange(desc(owned)) %>% 
+  head(20) %>% 
+  mutate(primary = fct_reorder(primary, owned)) %>% 
+  ggplot() +
+  aes(x = primary, y = owned) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Top20 - Jogos mais adquiridos",
+    x = "",
+    y = "Qtd.adquirida"
+  ) +
+  theme_fivethirtyeight()
+  
+ggplotly(p3)
+```
+
+## Gráfico 7 - Relação entre quantidade de jogos adquiridos vs idade
+
+```{r gráfico_7}
+# gráfico_7 -------------------------------------------------
+jogo <- details %>% 
+  arrange(desc(owned)) %>% 
+  head(3)
+
+details %>% 
+  ggplot() +
+  aes(x = minage, y = owned) +
+  geom_point() + 
+  annotate(
+    "text",
+    x = jogo$minage,
+    y = jogo$owned,
+    label = jogo$primary,
+    hjust = 1.1,
+    vjust = 0.5,
+    size = 2.5,
+    color = "red"
+    ) +
+  labs(
+    title = "Relação entre quantidade adquirida x idade",
+    x = "Idade",
+    y = "Qtd.adquirida"
+  ) +
+  theme_clean()
+
+```
+
+**Obrigado!!!**

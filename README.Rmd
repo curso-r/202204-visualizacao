@@ -148,20 +148,26 @@ tibble::tibble(
 ## Trabalhos finais premiados
 
 ```{r echo=FALSE}
-nome_pasta <- "trabalhos_premiados"
-
 tibble::tibble(
-  script = CursoRopen:::list_github_files(params$turma, nome_pasta, ".zip|.rar"),
-  link = paste0(
-    "https://github.com/curso-r/",
-    params$turma,
-    "/raw/master/",
-    script
+  nome = c(
+    "Amilcar L. do Prado G. Gramacho",
+    "Saulo Valentim"
   ),
-  pasta_compactada = glue::glue("[{script}]({link})")
-) %>% 
-  dplyr::select(pasta_compactada) %>% 
+  script = c(
+    "https://github.com/amilcar-pg/dia_a_dia_amigos", 
+    "https://github.com/curso-r/202204-visualizacao/blob/main/trabalhos_premiados/visualizacao_board_games.Rmd"
+  ),
+  link = c(
+    "https://amilcar-pg.github.io/dia_a_dia_amigos/#1", 
+    "https://curso-r.github.io/202204-visualizacao/trabalhos_premiados/visualizacao_board_games.html"
+  )
+) |> 
+  dplyr::mutate(dplyr::across(
+    -nome, 
+    .fns = \(.x) stringr::str_glue("[{dplyr::cur_column()}]({.x})")
+  )) |> 
   knitr::kable()
+
 ```
 
 

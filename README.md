@@ -66,8 +66,10 @@ Fora do horário de aula ou monitoria:
 
 ## Trabalhos finais premiados
 
-| pasta_compactada |
-|:-----------------|
+| nome                            | script                                                                                                              | link                                                                                                    |
+|:--------------------------------|:--------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
+| Amilcar L. do Prado G. Gramacho | [script](https://github.com/amilcar-pg/dia_a_dia_amigos)                                                            | [link](https://amilcar-pg.github.io/dia_a_dia_amigos/#1)                                                |
+| Saulo Valentim                  | [script](https://github.com/curso-r/202204-visualizacao/blob/main/trabalhos_premiados/visualizacao_board_games.Rmd) | [link](https://curso-r.github.io/202204-visualizacao/trabalhos_premiados/visualizacao_board_games.html) |
 
 ## Material extra
 
